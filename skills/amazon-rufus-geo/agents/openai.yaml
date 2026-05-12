@@ -1,4 +1,4 @@
 interface:
   display_name: "Amazon Rufus GEO"
-  short_description: "Optimize listings for Rufus AI"
-  default_prompt: "Use $amazon-rufus-geo to audit this Amazon listing for Rufus/COSMO visibility and produce concrete optimization recommendations."
+  short_description: "Rufus/COSMO listing audit with live Q&A"
+  default_prompt: "Use $amazon-rufus-geo to audit this Amazon listing against competitors, capture Rufus/COSMO visibility gaps, and produce concrete title, bullet, A+, Q&A, image, and backend optimization recommendations."

@@ -1,0 +1,56 @@
+name: _generic
+display_name: 通用兜底 / Generic
+description: |
+  当产品不属于已内置类目时使用。覆盖基础五维：规格、使用、品质、
+  差评和竞品对比。够用但不专业；稳定经营的类目应补专属 pack。
+
+trigger_subcategories: []
+
+dimensions:
+  - code: specs
+    name_cn: 规格/参数
+    weight: 5
+    decides_what_to_change: 主图参数图、A+ specs 模块、bullet 第 1-2 条
+  - code: usage
+    name_cn: 使用场景/方法
+    weight: 4
+    decides_what_to_change: 场景图、A+ how-to 模块、bullet 场景行
+  - code: quality
+    name_cn: 品质/做工/材质
+    weight: 4
+    decides_what_to_change: 工艺图、A+ 品质模块、bullet 材质行
+  - code: complaint
+    name_cn: 差评/退货原因
+    weight: 5
+    decides_what_to_change: FAQ 图、A+ FAQ 模块、Q&A
+  - code: vs_competitor
+    name_cn: 竞品对比
+    weight: 4
+    decides_what_to_change: A+ Comparison Chart、标题/五点差异化
+
+critical_dimensions:
+  - quality
+  - complaint
+
+min_question_set:
+  - specs
+  - usage
+  - quality
+  - complaint
+  - vs_competitor
+  - customer_sentiment
+
+profile_required_fields:
+  - title
+  - price_tier
+  - rating
+  - review_count
+  - top_complaint_themes
+  - has_aplus
+  - aplus_modules_count
+  - image_count
+
+files:
+  question_taxonomy: question-taxonomy.md
+  product_profile: product-profile.md
+  fix_playbook: fix-playbook.md

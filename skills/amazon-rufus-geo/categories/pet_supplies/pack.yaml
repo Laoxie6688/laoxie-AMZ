@@ -1,0 +1,102 @@
+name: pet_supplies
+display_name: 宠物用品 / Pet Supplies
+description: |
+  宠物用品类目专用，覆盖 dog harness、pet travel kit、pet training、cat litter box、
+  grooming、feeding、carrier、toy 等。核心矛盾是尺寸适配、安全舒适、训练/出行场景、
+  配件是否真正有用、耐用性和差评预防。
+
+trigger_subcategories:
+  - pet supplies
+  - dog harness
+  - dog collar
+  - dog leash
+  - pet travel
+  - dog training
+  - dog vest harness
+  - cat litter box
+  - grooming
+  - pet carrier
+  - pet bowl
+  - pet toy
+
+dimensions:
+  - code: fit_size
+    name_cn: 尺寸/体型适配
+    weight: 5
+    decides_what_to_change: 尺寸图、测量图、Q&A、变体标题
+  - code: no_pull_control
+    name_cn: 牵引控制/训练效果
+    weight: 5
+    decides_what_to_change: Bullet 核心功能、训练场景图、A+ 控制原理
+  - code: comfort_pressure
+    name_cn: 舒适度/受力/宠物身体压力
+    weight: 5
+    decides_what_to_change: 胸背受力图、材质近景、Bullet 舒适行
+  - code: travel_safety
+    name_cn: 出行/车载/户外安全
+    weight: 4
+    decides_what_to_change: 车载图、户外图、A+ travel 模块
+  - code: accessories_included
+    name_cn: 配件完整度/实用性
+    weight: 4
+    decides_what_to_change: 配件清单图、A+ 组件-场景对应图
+  - code: durability
+    name_cn: 耐用性/五金/缝线
+    weight: 4
+    decides_what_to_change: 材质和五金细节图、Bullet durability
+  - code: cleaning_care
+    name_cn: 清洁保养/气味
+    weight: 3
+    decides_what_to_change: Q&A、A+ care 模块
+  - code: complaint
+    name_cn: 差评/退货原因
+    weight: 5
+    decides_what_to_change: FAQ 图、Q&A、边界说明
+  - code: vs_competitor
+    name_cn: 竞品对比/推荐分流
+    weight: 4
+    decides_what_to_change: A+ Comparison Chart、标题定位、Bullet 边界
+
+critical_dimensions:
+  - fit_size
+  - no_pull_control
+  - comfort_pressure
+  - complaint
+
+min_question_set:
+  - fit_size
+  - no_pull_control
+  - comfort_pressure
+  - travel_safety
+  - accessories_included
+  - durability
+  - cleaning_care
+  - complaint
+  - vs_competitor
+  - customer_sentiment
+
+profile_required_fields:
+  - title
+  - brand
+  - price
+  - rating
+  - review_count
+  - best_sellers_rank
+  - size_chart
+  - target_species
+  - breed_size
+  - neck_girth
+  - chest_girth
+  - included_components
+  - material
+  - leash_attachment_points
+  - reflective_features
+  - travel_safety_features
+  - top_complaint_themes
+  - has_aplus
+  - image_count
+
+files:
+  question_taxonomy: question-taxonomy.md
+  product_profile: product-profile.md
+  fix_playbook: fix-playbook.md
